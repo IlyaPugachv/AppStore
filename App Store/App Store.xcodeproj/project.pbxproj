@@ -14,6 +14,9 @@
 		BC2FC0D72ABC62F0006BE650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2FC0D62ABC62F0006BE650 /* Main.storyboard */; };
 		BC2FC0D92ABC6427006BE650 /* IphoneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC0D82ABC6427006BE650 /* IphoneData.swift */; };
 		BC2FC0DC2ABC64CE006BE650 /* Iphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC0DB2ABC64CE006BE650 /* Iphone.swift */; };
+		BC2FC0DF2ABC6809006BE650 /* AllModelsIphoneTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC0DE2ABC6809006BE650 /* AllModelsIphoneTableVC.swift */; };
+		BC2FC0E12ABC701F006BE650 /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC0E02ABC701F006BE650 /* CellManager.swift */; };
+		BC2FC0E32ABC7674006BE650 /* InfoIphoneModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		BC2FC0D62ABC62F0006BE650 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BC2FC0D82ABC6427006BE650 /* IphoneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IphoneData.swift; sourceTree = "<group>"; };
 		BC2FC0DB2ABC64CE006BE650 /* Iphone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iphone.swift; sourceTree = "<group>"; };
+		BC2FC0DE2ABC6809006BE650 /* AllModelsIphoneTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllModelsIphoneTableVC.swift; sourceTree = "<group>"; };
+		BC2FC0E02ABC701F006BE650 /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
+		BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoIphoneModelVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,9 @@
 		BC2FC0BD2ABC60E0006BE650 /* App Store */ = {
 			isa = PBXGroup;
 			children = (
-				BC2FC0DA2ABC64B8006BE650 /* Models */,
+				BC2FC0DD2ABC67CE006BE650 /* Controllers */,
 				BC2FC0D42ABC6175006BE650 /* Views */,
+				BC2FC0DA2ABC64B8006BE650 /* Models */,
 				BC2FC0D22ABC6163006BE650 /* Services */,
 				BC2FC0C72ABC60E1006BE650 /* Assets.xcassets */,
 				BC2FC0CC2ABC60E1006BE650 /* Info.plist */,
@@ -72,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				BC2FC0D82ABC6427006BE650 /* IphoneData.swift */,
+				BC2FC0E02ABC701F006BE650 /* CellManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -100,6 +108,15 @@
 				BC2FC0DB2ABC64CE006BE650 /* Iphone.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BC2FC0DD2ABC67CE006BE650 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC2FC0DE2ABC6809006BE650 /* AllModelsIphoneTableVC.swift */,
+				BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC2FC0D92ABC6427006BE650 /* IphoneData.swift in Sources */,
+				BC2FC0E32ABC7674006BE650 /* InfoIphoneModelVC.swift in Sources */,
+				BC2FC0E12ABC701F006BE650 /* CellManager.swift in Sources */,
+				BC2FC0DF2ABC6809006BE650 /* AllModelsIphoneTableVC.swift in Sources */,
 				BC2FC0BF2ABC60E0006BE650 /* AppDelegate.swift in Sources */,
 				BC2FC0DC2ABC64CE006BE650 /* Iphone.swift in Sources */,
 				BC2FC0C12ABC60E0006BE650 /* SceneDelegate.swift in Sources */,
