@@ -8,12 +8,14 @@ class InfoIphoneModelVC: UIViewController {
         IphoneData.shared.iphone[index]
     }
     
+    @IBOutlet weak var imageStackView: UIStackView!
     @IBOutlet weak var imageVIew: UIImageView!
     @IBOutlet weak var nameIphoneLbl: UILabel!
     @IBOutlet weak var priceOnIphoneLbl: UILabel!
     @IBOutlet weak var iphoneReviewLbl: UILabel!
     @IBOutlet weak var feedBackButton: UIButton!
     @IBOutlet weak var leaveReviewAndRatingButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +28,14 @@ class InfoIphoneModelVC: UIViewController {
     
     private func updateUI(with size: CGSize) {
         let isVertival = size.width < size.height
-//        mealStackView.axis = isVertival ? .vertical : .horizontal
+        imageStackView.axis = isVertival ? .vertical : .horizontal
         title = iphone.name
         imageVIew.image = iphone.image
         nameIphoneLbl.text = iphone.name
-//        priceOnIphoneLbl.text = iphone.rating
+        priceOnIphoneLbl.text = iphone.rating
         iphoneReviewLbl.text = iphone.price.description + " $"
-//        feedBackButton.setTitle("Посмотреть (\(iphone.feedBacks.count)) отзывов", for: .normal)
-//        leaveReviewAndRatingButton.isEnabled = iphone.feedBacks.count != 0
+        feedBackButton.setTitle("Посмотреть (\(iphone.feedBacks.count)) отзывов", for: .normal)
+        leaveReviewAndRatingButton.isEnabled = iphone.feedBacks.count != 0
     }
     
     
