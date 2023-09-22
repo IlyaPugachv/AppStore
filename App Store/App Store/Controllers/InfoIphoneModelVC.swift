@@ -35,7 +35,7 @@ class InfoIphoneModelVC: UIViewController {
         priceOnIphoneLbl.text = iphone.rating
         iphoneReviewLbl.text = iphone.price.description + " $"
         feedBackButton.setTitle("Посмотреть (\(iphone.feedBacks.count)) отзывов", for: .normal)
-        leaveReviewAndRatingButton.isEnabled = iphone.feedBacks.count != 0
+//        leaveReviewAndRatingButton.isEnabled = iphone.feedBacks.count != 0
     }
     
     

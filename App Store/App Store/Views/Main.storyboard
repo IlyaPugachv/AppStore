@@ -107,11 +107,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="232.33333333333334" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <segue destination="ozg-dU-amf" kind="show" id="i4V-Od-Slc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAO-DQ-bEq">
                                                 <rect key="frame" x="0.0" y="54.333333333333371" width="232.33333333333334" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Оставить отзыв и рейтинг"/>
+                                                <connections>
+                                                    <segue destination="HkO-sw-WiI" kind="show" id="fLx-QU-xIg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -141,6 +147,109 @@
             </objects>
             <point key="canvasLocation" x="1292" y="142"/>
         </scene>
+        <!--LeaveA ReviewVC-->
+        <scene sceneID="nNY-vk-Ldv">
+            <objects>
+                <viewController id="HkO-sw-WiI" customClass="LeaveAReviewVC" customModule="App_Store" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2oy-oJ-goI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="107" translatesAutoresizingMaskIntoConstraints="NO" id="CKp-qt-0Lh">
+                                <rect key="frame" x="50" y="133" width="293" height="635"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q4z-Fh-YOk">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="318.66666666666669"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xr1-aJ-zph">
+                                                <rect key="frame" x="0.0" y="0.0" width="293" height="293"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Необходимо как минимум 20 символов" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8f-YH-lEm">
+                                                <rect key="frame" x="0.0" y="303" width="293" height="15.666666666666686"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="ZAL-8q-JOy">
+                                        <rect key="frame" x="0.0" y="425.66666666666657" width="293" height="209.33333333333331"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gn7-Wd-SnU">
+                                                <rect key="frame" x="0.0" y="0.0" width="293" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="b9p-Be-5bs"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="⭐️"/>
+                                                    <segment title="⭐️⭐️"/>
+                                                    <segment title="⭐️⭐️⭐️"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlu-BU-qEI">
+                                                <rect key="frame" x="0.0" y="136" width="293" height="73.333333333333314"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Сохранить отзыв"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dgl-Ks-T76"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CKp-qt-0Lh" firstAttribute="top" secondItem="dgl-Ks-T76" secondAttribute="top" constant="30" id="3we-kN-Bfd"/>
+                            <constraint firstItem="CKp-qt-0Lh" firstAttribute="centerX" secondItem="2oy-oJ-goI" secondAttribute="centerX" id="44I-Ly-p8L"/>
+                            <constraint firstItem="dgl-Ks-T76" firstAttribute="bottom" secondItem="CKp-qt-0Lh" secondAttribute="bottom" constant="50" id="8Vx-Ta-ZwV"/>
+                            <constraint firstItem="CKp-qt-0Lh" firstAttribute="leading" secondItem="dgl-Ks-T76" secondAttribute="leading" constant="50" id="q56-sb-3fl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E3K-Gi-w6v"/>
+                    <connections>
+                        <outlet property="errorLbl" destination="H8f-YH-lEm" id="vaq-zK-2ql"/>
+                        <outlet property="saveButton" destination="Zlu-BU-qEI" id="WoR-2c-mY7"/>
+                        <outlet property="segmentalControl" destination="gn7-Wd-SnU" id="UJm-cM-KtS"/>
+                        <outlet property="textView" destination="xr1-aJ-zph" id="UMQ-Kx-a0E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dl8-BY-3XF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2079" y="401"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="7ln-Kh-x9n">
+            <objects>
+                <tableViewController id="ozg-dU-amf" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rLs-9z-vx2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" id="Y7z-sx-XXq">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y7z-sx-XXq" id="AP1-a1-9vA">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ozg-dU-amf" id="o8W-lT-5S1"/>
+                            <outlet property="delegate" destination="ozg-dU-amf" id="pQZ-uY-xwg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="AXm-WC-xvP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEd-GM-Onj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2080" y="-372"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="YZS-aK-o5s">
             <objects>
@@ -160,8 +269,14 @@
     </scenes>
     <resources>
         <image name="iPhone 11" width="1200" height="1200"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
