@@ -13,7 +13,17 @@ class AllModelsIphoneTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let iphone = iphone[indexPath.row]
         CellManager.configure(cell, with: iphone)
+       
         return cell
     }
-}
+        // MARK: - Navigation
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+            let iphoneModelVC = segue.destination as? InfoIphoneModelVC else { return }
+            iphoneModelVC.index = indexPath.row
+        }
+    }
+
+ 
 

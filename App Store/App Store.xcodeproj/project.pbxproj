@@ -17,6 +17,7 @@
 		BC2FC0DF2ABC6809006BE650 /* AllModelsIphoneTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC0DE2ABC6809006BE650 /* AllModelsIphoneTableVC.swift */; };
 		BC2FC0E12ABC701F006BE650 /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC0E02ABC701F006BE650 /* CellManager.swift */; };
 		BC2FC0E32ABC7674006BE650 /* InfoIphoneModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */; };
+		BC40DE4E2ABD81020052C049 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40DE4D2ABD81020052C049 /* Feedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BC2FC0DE2ABC6809006BE650 /* AllModelsIphoneTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllModelsIphoneTableVC.swift; sourceTree = "<group>"; };
 		BC2FC0E02ABC701F006BE650 /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
 		BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoIphoneModelVC.swift; sourceTree = "<group>"; };
+		BC40DE4D2ABD81020052C049 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				BC2FC0DB2ABC64CE006BE650 /* Iphone.swift */,
+				BC40DE4D2ABD81020052C049 /* Feedback.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				BC2FC0DF2ABC6809006BE650 /* AllModelsIphoneTableVC.swift in Sources */,
 				BC2FC0BF2ABC60E0006BE650 /* AppDelegate.swift in Sources */,
 				BC2FC0DC2ABC64CE006BE650 /* Iphone.swift in Sources */,
+				BC40DE4E2ABD81020052C049 /* Feedback.swift in Sources */,
 				BC2FC0C12ABC60E0006BE650 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

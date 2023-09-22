@@ -44,6 +44,9 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tvf-7e-blb" kind="show" id="Y55-MS-wda"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,9 +55,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="App Store" id="40L-1Z-IpM"/>
-                    <connections>
-                        <segue destination="tvf-7e-blb" kind="presentation" identifier="goToInfoModelVC" id="nQb-Vr-Twa"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCN-Hd-sO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,47 +65,47 @@
             <objects>
                 <viewController id="tvf-7e-blb" customClass="InfoIphoneModelVC" customModule="App_Store" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bwV-8V-cZ4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tEZ-cy-kLi">
-                                <rect key="frame" x="76" y="70" width="240" height="240"/>
+                                <rect key="frame" x="76" y="173" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tEZ-cy-kLi" secondAttribute="height" multiplier="1:1" id="g98-fy-meT"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="0eT-Kq-426" userLabel="Button">
-                                <rect key="frame" x="159" y="650" width="75" height="116.66666666666663"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0eT-Kq-426" userLabel="Button">
+                                <rect key="frame" x="50" y="689.33333333333337" width="293" height="88.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJc-kY-cdi">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAO-DQ-bEq">
-                                        <rect key="frame" x="0.0" y="82.333333333333371" width="75" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="54.333333333333258" width="293" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Оставить отзыв и рейтинг"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hhj-sB-KRR" userLabel="InfoLbl">
-                                <rect key="frame" x="175" y="410" width="41.333333333333343" height="117"/>
+                                <rect key="frame" x="50" y="463" width="293" height="117"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whh-AN-u98">
-                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whh-AN-u98">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kd-xI-Hlx">
-                                        <rect key="frame" x="0.0" y="48.333333333333314" width="41.333333333333336" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kd-xI-Hlx">
+                                        <rect key="frame" x="0.0" y="48.333333333333314" width="293" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqP-Hi-xy1">
-                                        <rect key="frame" x="0.0" y="96.666666666666686" width="41.333333333333336" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqP-Hi-xy1">
+                                        <rect key="frame" x="0.0" y="96.666666666666629" width="293" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -116,17 +116,26 @@
                         <viewLayoutGuide key="safeArea" id="3Lw-lM-wvd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3Lw-lM-wvd" firstAttribute="trailing" secondItem="Hhj-sB-KRR" secondAttribute="trailing" constant="176.66999999999999" id="7iK-ys-dal"/>
-                            <constraint firstItem="3Lw-lM-wvd" firstAttribute="trailing" secondItem="0eT-Kq-426" secondAttribute="trailing" constant="159" id="9fd-ic-Bh9"/>
+                            <constraint firstItem="3Lw-lM-wvd" firstAttribute="trailing" secondItem="Hhj-sB-KRR" secondAttribute="trailing" constant="50" id="7iK-ys-dal"/>
+                            <constraint firstItem="3Lw-lM-wvd" firstAttribute="trailing" secondItem="0eT-Kq-426" secondAttribute="trailing" constant="50" id="9fd-ic-Bh9"/>
                             <constraint firstItem="tEZ-cy-kLi" firstAttribute="leading" secondItem="3Lw-lM-wvd" secondAttribute="leading" constant="76" id="HQl-YU-sF9"/>
-                            <constraint firstItem="Hhj-sB-KRR" firstAttribute="leading" secondItem="3Lw-lM-wvd" secondAttribute="leading" constant="175" id="UtX-tv-mrd"/>
+                            <constraint firstItem="Hhj-sB-KRR" firstAttribute="leading" secondItem="3Lw-lM-wvd" secondAttribute="leading" constant="50" id="UtX-tv-mrd"/>
                             <constraint firstItem="tEZ-cy-kLi" firstAttribute="top" secondItem="3Lw-lM-wvd" secondAttribute="top" constant="70" id="YN6-xL-eBd"/>
-                            <constraint firstItem="0eT-Kq-426" firstAttribute="leading" secondItem="3Lw-lM-wvd" secondAttribute="leading" constant="159" id="aSa-dl-Ped"/>
-                            <constraint firstItem="3Lw-lM-wvd" firstAttribute="bottom" secondItem="0eT-Kq-426" secondAttribute="bottom" constant="75.329999999999998" id="axe-eJ-kEM"/>
+                            <constraint firstItem="0eT-Kq-426" firstAttribute="leading" secondItem="3Lw-lM-wvd" secondAttribute="leading" constant="50" id="aSa-dl-Ped"/>
+                            <constraint firstItem="3Lw-lM-wvd" firstAttribute="bottom" secondItem="0eT-Kq-426" secondAttribute="bottom" constant="40" id="axe-eJ-kEM"/>
                             <constraint firstItem="3Lw-lM-wvd" firstAttribute="trailing" secondItem="tEZ-cy-kLi" secondAttribute="trailing" constant="77" id="hPQ-NV-RTg"/>
-                            <constraint firstItem="Hhj-sB-KRR" firstAttribute="top" secondItem="tEZ-cy-kLi" secondAttribute="bottom" constant="100" id="lGv-7t-Izd"/>
+                            <constraint firstItem="Hhj-sB-KRR" firstAttribute="top" secondItem="tEZ-cy-kLi" secondAttribute="bottom" constant="50" id="lGv-7t-Izd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ypf-xU-i9g"/>
+                    <connections>
+                        <outlet property="feedBackButton" destination="BJc-kY-cdi" id="lSc-4b-YQ5"/>
+                        <outlet property="imageVIew" destination="tEZ-cy-kLi" id="6CJ-uO-3y4"/>
+                        <outlet property="iphoneReviewLbl" destination="rqP-Hi-xy1" id="kHp-Be-9iR"/>
+                        <outlet property="leaveReviewAndRatingButton" destination="WAO-DQ-bEq" id="TwJ-of-mcD"/>
+                        <outlet property="nameIphoneLbl" destination="Whh-AN-u98" id="95T-3N-xnQ"/>
+                        <outlet property="priceOnIphoneLbl" destination="1Kd-xI-Hlx" id="Qta-B7-tlL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y1Q-2B-iuQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
