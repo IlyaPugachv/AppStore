@@ -5,6 +5,7 @@ class IphoneData {
     static let shared = IphoneData()
     
     var iphone: [Iphone]
+    var feedback: String?
     
     private init() {
         

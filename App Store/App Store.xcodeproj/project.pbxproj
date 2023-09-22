@@ -19,6 +19,7 @@
 		BC2FC0E32ABC7674006BE650 /* InfoIphoneModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */; };
 		BC40DE4E2ABD81020052C049 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40DE4D2ABD81020052C049 /* Feedback.swift */; };
 		BC40DE502ABD95AF0052C049 /* LeaveAReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40DE4F2ABD95AF0052C049 /* LeaveAReviewVC.swift */; };
+		BC40DE522ABDB0040052C049 /* AllReviewsAboutIphones.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40DE512ABDB0040052C049 /* AllReviewsAboutIphones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoIphoneModelVC.swift; sourceTree = "<group>"; };
 		BC40DE4D2ABD81020052C049 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		BC40DE4F2ABD95AF0052C049 /* LeaveAReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveAReviewVC.swift; sourceTree = "<group>"; };
+		BC40DE512ABDB0040052C049 /* AllReviewsAboutIphones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReviewsAboutIphones.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				BC2FC0DE2ABC6809006BE650 /* AllModelsIphoneTableVC.swift */,
 				BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */,
 				BC40DE4F2ABD95AF0052C049 /* LeaveAReviewVC.swift */,
+				BC40DE512ABDB0040052C049 /* AllReviewsAboutIphones.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC40DE522ABDB0040052C049 /* AllReviewsAboutIphones.swift in Sources */,
 				BC2FC0D92ABC6427006BE650 /* IphoneData.swift in Sources */,
 				BC40DE502ABD95AF0052C049 /* LeaveAReviewVC.swift in Sources */,
 				BC2FC0E32ABC7674006BE650 /* InfoIphoneModelVC.swift in Sources */,

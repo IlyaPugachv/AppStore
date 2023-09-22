@@ -27,10 +27,10 @@ class LeaveAReviewVC: UIViewController, UITextViewDelegate {
         }
     }
     
-    
-    
-    
-    
+    @IBAction func saveBtnAction(_ sender: UIButton) {
+        IphoneData.shared.feedback = textView.text
+        navigationController?.popToRootViewController(animated: true)
+    }
     
     
     
@@ -44,7 +44,7 @@ class LeaveAReviewVC: UIViewController, UITextViewDelegate {
     private func setupUI() {
         errorLbl.isHidden = true
         textView.delegate = self
-        textView.backgroundColor = .white
+        textView.backgroundColor = .white // нужно будет сменить цвет!
     }
     
     
