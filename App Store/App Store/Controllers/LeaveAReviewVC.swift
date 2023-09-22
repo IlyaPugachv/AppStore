@@ -13,7 +13,7 @@ class LeaveAReviewVC: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        showErrorLabelIfNeeded(textView: textView, errorLabel: errorLbl, minLength: 50)
+        showErrorLabelIfNeeded(textView: textView, errorLabel: errorLbl, minLength: 5)
     }
     
     func showErrorLabelIfNeeded(textView: UITextView, errorLabel: UILabel, minLength: Int) {
