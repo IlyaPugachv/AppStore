@@ -6,7 +6,7 @@ struct Iphone {
     let price: Int
     let image: UIImage?
     
-    var feedBacks: [Feedback] = []
+    static var feedBacks: [Feedback] = []
     
-    var rating = "⭐️⭐️⭐️"
+    var rating = ""
 }

@@ -20,6 +20,8 @@
 		BC40DE4E2ABD81020052C049 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40DE4D2ABD81020052C049 /* Feedback.swift */; };
 		BC40DE502ABD95AF0052C049 /* LeaveAReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40DE4F2ABD95AF0052C049 /* LeaveAReviewVC.swift */; };
 		BC40DE522ABDB0040052C049 /* AllReviewsAboutIphones.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40DE512ABDB0040052C049 /* AllReviewsAboutIphones.swift */; };
+		BCBAEFAC2ABF71AB003B8453 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAEFAA2ABF71AB003B8453 /* TableViewCell.swift */; };
+		BCBAEFAD2ABF71AB003B8453 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBAEFAB2ABF71AB003B8453 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		BC40DE4D2ABD81020052C049 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		BC40DE4F2ABD95AF0052C049 /* LeaveAReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveAReviewVC.swift; sourceTree = "<group>"; };
 		BC40DE512ABDB0040052C049 /* AllReviewsAboutIphones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReviewsAboutIphones.swift; sourceTree = "<group>"; };
+		BCBAEFAA2ABF71AB003B8453 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BCBAEFAB2ABF71AB003B8453 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 			children = (
 				BC2FC0D82ABC6427006BE650 /* IphoneData.swift */,
 				BC2FC0E02ABC701F006BE650 /* CellManager.swift */,
+				BCBAEFAA2ABF71AB003B8453 /* TableViewCell.swift */,
+				BCBAEFAB2ABF71AB003B8453 /* TableViewCell.xib */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -187,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC2FC0D72ABC62F0006BE650 /* Main.storyboard in Resources */,
+				BCBAEFAD2ABF71AB003B8453 /* TableViewCell.xib in Resources */,
 				BC2FC0CB2ABC60E1006BE650 /* LaunchScreen.storyboard in Resources */,
 				BC2FC0C82ABC60E1006BE650 /* Assets.xcassets in Resources */,
 			);
@@ -207,6 +214,7 @@
 				BC2FC0DF2ABC6809006BE650 /* AllModelsIphoneTableVC.swift in Sources */,
 				BC2FC0BF2ABC60E0006BE650 /* AppDelegate.swift in Sources */,
 				BC2FC0DC2ABC64CE006BE650 /* Iphone.swift in Sources */,
+				BCBAEFAC2ABF71AB003B8453 /* TableViewCell.swift in Sources */,
 				BC40DE4E2ABD81020052C049 /* Feedback.swift in Sources */,
 				BC2FC0C12ABC60E0006BE650 /* SceneDelegate.swift in Sources */,
 			);
