@@ -32,7 +32,7 @@ class InfoIphoneModelVC: UIViewController {
         title = iphone.name
         imageVIew.image = iphone.image
         nameIphoneLbl.text = iphone.name
-//        priceOnIphoneLbl.text = IphoneData.shared.rating
+        priceOnIphoneLbl.text = IphoneData.shared.rating
         iphoneReviewLbl.text = iphone.price.description + " $"
         feedBackButton.setTitle("Посмотреть (\(Iphone.feedBacks.count)) отзывов", for: .normal)
 //        leaveReviewAndRatingButton.isEnabled = iphone.feedBacks.count != 0

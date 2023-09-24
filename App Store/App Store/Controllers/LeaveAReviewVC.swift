@@ -12,7 +12,6 @@ class LeaveAReviewVC: UIViewController, UITextViewDelegate {
         setupUI()
     }
     
-    
     func textViewDidChange(_ textView: UITextView) {
         showErrorLabelIfNeeded(textView: textView, errorLabel: errorLbl, minLength: 5)
     }
@@ -33,45 +32,18 @@ class LeaveAReviewVC: UIViewController, UITextViewDelegate {
         if let selectedTitle = segmentalControl.titleForSegment(at: index) {
             IphoneData.shared.rating = selectedTitle
         } else {
-            return
+            return // подумаешь позже
         }
     }
-    
     
     @IBAction func saveBtnAction(_ sender: UIButton) {
         IphoneData.shared.feedback = textView.text
         navigationController?.popToRootViewController(animated: true)
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     private func setupUI() {
         errorLbl.isHidden = true
         textView.delegate = self
         textView.backgroundColor = .gray // нужно будет сменить цвет!
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

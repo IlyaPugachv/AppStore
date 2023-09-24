@@ -13,7 +13,7 @@ class AllReviewsAboutIphones: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       1
+        iphone.count
         
     }
     

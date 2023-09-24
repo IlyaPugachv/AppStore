@@ -8,5 +8,5 @@ struct Iphone {
     
     static var feedBacks: [Feedback] = []
     
-    var rating = ""
+//    var rating = ""
 }
