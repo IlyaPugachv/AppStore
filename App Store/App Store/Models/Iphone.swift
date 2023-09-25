@@ -6,7 +6,25 @@ struct Iphone {
     let price: Int
     let image: UIImage?
     
-    static var feedBacks: [Feedback] = []
+    var feedBacks: [Feedback] = []
     
-//    var rating = ""
+    var ratingBar: String {
+        if let rating = rating {
+            return String(repeating: "⭐️", count: Int(rating.rounded(.up))) // control + command + " "
+        } else {
+            return "There are no reviews yet"
+        }
+    }
+    
+    private var rating: Double? {
+        if feedBacks.isEmpty {
+            return nil
+        } else {
+            var sum: Double = 0
+            for rewiev in feedBacks {
+                sum += rewiev.mark
+            }
+            return sum / Double(feedBacks.count)
+        }
+    }
 }

@@ -2,8 +2,20 @@ import Foundation
 
 struct Feedback {
     
-    static let date = Date()
+    private let date = Date()
     
     let text: String
     let mark: Double
+    
+    var ratingBar: String {
+        String(repeating: "⭐️", count: Int(mark.rounded(.up))) // control + command + " "
+    }
+
+    var dateString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "ru_Ru")
+        return dateFormatter.string(from: date)
+    }
 }

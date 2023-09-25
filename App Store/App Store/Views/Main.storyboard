@@ -45,7 +45,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="tvf-7e-blb" kind="show" id="Y55-MS-wda"/>
+                                    <segue destination="tvf-7e-blb" kind="show" identifier="ShowMealDetail" id="Y55-MS-wda"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -189,9 +189,6 @@
                                                     <segment title="⭐️⭐️"/>
                                                     <segment title="⭐️⭐️⭐️"/>
                                                 </segments>
-                                                <connections>
-                                                    <action selector="segmentedControl:" destination="HkO-sw-WiI" eventType="valueChanged" id="TZR-Ey-Bxv"/>
-                                                </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlu-BU-qEI">
                                                 <rect key="frame" x="0.0" y="136" width="293" height="73.333333333333314"/>
@@ -199,6 +196,7 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Сохранить отзыв"/>
                                                 <connections>
                                                     <action selector="saveBtnAction:" destination="HkO-sw-WiI" eventType="touchUpInside" id="VQm-qc-Ab6"/>
+                                                    <segue destination="P99-64-TFG" kind="unwind" unwindAction="unwindToMealsTVC:" id="f0e-4U-O9f"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -224,6 +222,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dl8-BY-3XF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="P99-64-TFG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2079" y="401"/>
         </scene>
