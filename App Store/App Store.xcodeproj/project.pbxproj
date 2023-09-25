@@ -126,12 +126,44 @@
 		BC2FC0DD2ABC67CE006BE650 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BC2FC0DE2ABC6809006BE650 /* AllModelsIphoneTableVC.swift */,
-				BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */,
-				BC40DE4F2ABD95AF0052C049 /* LeaveAReviewVC.swift */,
-				BC40DE512ABDB0040052C049 /* AllReviewsAboutIphones.swift */,
+				BCBAEFBE2AC1B434003B8453 /* AllModelsIphone */,
+				BCBAEFBD2AC1B41F003B8453 /* InfoIphone */,
+				BCBAEFBC2AC1B405003B8453 /* LeaveReview */,
+				BCBAEFBB2AC1B3F4003B8453 /* AllReviews */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BCBAEFBB2AC1B3F4003B8453 /* AllReviews */ = {
+			isa = PBXGroup;
+			children = (
+				BC40DE512ABDB0040052C049 /* AllReviewsAboutIphones.swift */,
+			);
+			path = AllReviews;
+			sourceTree = "<group>";
+		};
+		BCBAEFBC2AC1B405003B8453 /* LeaveReview */ = {
+			isa = PBXGroup;
+			children = (
+				BC40DE4F2ABD95AF0052C049 /* LeaveAReviewVC.swift */,
+			);
+			path = LeaveReview;
+			sourceTree = "<group>";
+		};
+		BCBAEFBD2AC1B41F003B8453 /* InfoIphone */ = {
+			isa = PBXGroup;
+			children = (
+				BC2FC0E22ABC7674006BE650 /* InfoIphoneModelVC.swift */,
+			);
+			path = InfoIphone;
+			sourceTree = "<group>";
+		};
+		BCBAEFBE2AC1B434003B8453 /* AllModelsIphone */ = {
+			isa = PBXGroup;
+			children = (
+				BC2FC0DE2ABC6809006BE650 /* AllModelsIphoneTableVC.swift */,
+			);
+			path = AllModelsIphone;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

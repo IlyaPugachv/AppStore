@@ -11,13 +11,9 @@ class LeaveAReviewVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupUI()
+        //        setupUI()
         textView.delegate = self
     }
-    
-    //    func textViewDidChange(_ textView: UITextView) {
-    //        showErrorLabelIfNeeded(textView: textView, errorLabel: errorLbl, minLength: 5)
-    //    }
     
     func showErrorLabelIfNeeded(textView: UITextView, errorLabel: UILabel, minLength: Int) {
         guard let text = textView.text else {
@@ -36,28 +32,28 @@ class LeaveAReviewVC: UIViewController {
         IphoneData.shared.iphone[index].feedBacks.append(feedback)
     }
 }
-    extension LeaveAReviewVC: UITextViewDelegate {
-        func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-            if textView == textView {
-                let isCountEnough = textView.text.count > 20
-                saveButton.isEnabled = isCountEnough
-                errorLbl.isHidden = isCountEnough
-            }
-            return true
+extension LeaveAReviewVC: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if textView == textView {
+            let isCountEnough = textView.text.count > 20
+            saveButton.isEnabled = isCountEnough
+            errorLbl.isHidden = isCountEnough
         }
+        return true
     }
-    
-    
-    
-    
-    
-    
-    
-    
-//    
+}
+
+
+
+
+
+
+
+
+//
 //    private func setupUI() {
 //        errorLbl.isHidden = true
-//       
+//
 //        textView.backgroundColor = .gray // нужно будет сменить цвет!
 //    }
 //}

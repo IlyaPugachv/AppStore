@@ -32,19 +32,18 @@ class InfoIphoneModelVC: UIViewController {
         title = iphone.name
         imageVIew.image = iphone.image
         nameIphoneLbl.text = iphone.name
-//        priceOnIphoneLbl.text =
+        priceOnIphoneLbl.text = iphone.ratingBar
         iphoneReviewLbl.text = iphone.price.description + " $"
         feedBackButton.setTitle("Посмотреть (\(iphone.feedBacks.count)) отзывов", for: .normal)
-//        leaveReviewAndRatingButton.isEnabled = iphone.feedBacks.count != 0
+        feedBackButton.isEnabled = iphone.feedBacks.count != 0
     }
-
-
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let dest = segue.destination as? LeaveAReviewVC {
-        dest.index = index
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? LeaveAReviewVC {
+            dest.index = index
+        }
+        if let dest = segue.destination as? AllReviewsAboutIphones {
+            dest.index = index
+        }
     }
-    if let dest = segue.destination as? AllReviewsAboutIphones {
-        dest.index = index
-    }
-}
 }

@@ -1,7 +1,7 @@
 import UIKit
 
 class AllReviewsAboutIphones: UITableViewController {
- 
+    
     var index: Int!
     
     var iphone: Iphone {
@@ -13,12 +13,9 @@ class AllReviewsAboutIphones: UITableViewController {
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "ReviewTableViewCell")
     }
     
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         iphone.feedBacks.count
-        
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -28,9 +25,7 @@ class AllReviewsAboutIphones: UITableViewController {
         cell.lableOne.text = feedback.dateString
         cell.lableTwo.text = feedback.text
         cell.labelthree.text = feedback.ratingBar
-      return cell
+        return cell
     }
-    
-
-    }
+}
 
