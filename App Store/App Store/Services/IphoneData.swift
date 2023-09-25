@@ -6,8 +6,6 @@ class IphoneData {
     
     var iphone: [Iphone]
    
-    
-    
     private init() {
         iphone = [
             Iphone(name: "iPhone 11", price: 700, image: .iPhone11),

@@ -10,9 +10,9 @@ struct Iphone {
     
     var ratingBar: String {
         if let rating = rating {
-            return String(repeating: "⭐️", count: Int(rating.rounded(.up))) // control + command + " "
+            return String(repeating: "⭐️", count: Int(rating.rounded(.up)))
         } else {
-            return "There are no reviews yet"
+            return "Отзывов нет!"
         }
     }
     

@@ -4,9 +4,7 @@ class InfoIphoneModelVC: UIViewController {
     
     var index: Int!
     
-    var iphone: Iphone {
-        IphoneData.shared.iphone[index]
-    }
+    var iphone: Iphone { IphoneData.shared.iphone[index] }
     
     // MARK: - @IBOutlet
     @IBOutlet weak var imageStackView: UIStackView!
@@ -23,9 +21,7 @@ class InfoIphoneModelVC: UIViewController {
         setupUI()
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        updateUI(with: size)
-    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) { updateUI(with: size) }
     
     private func updateUI(with size: CGSize) {
         let isVertival = size.width < size.height
@@ -39,12 +35,8 @@ class InfoIphoneModelVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dest = segue.destination as? LeaveAReviewVC {
-            dest.index = index
-        }
-        if let dest = segue.destination as? AllReviewsAboutIphones {
-            dest.index = index
-        }
+        if let dest = segue.destination as? LeaveAReviewVC { dest.index = index }
+        if let dest = segue.destination as? AllReviewsAboutIphones { dest.index = index }
     }
     
     private func numberOfReviews() {

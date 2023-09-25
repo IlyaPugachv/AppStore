@@ -33,12 +33,12 @@ class LeaveAReviewVC: UIViewController {
     }
     
     func setupUI() {
+        // MARK: - textView
         textView.delegate = self
         textView.backgroundColor = .gray
         textView.textColor = .black
         textView.backgroundColor = UIColor(white: 0.1, alpha: 0.1)
         textView.textColor = .black
-        
     }
 }
 
