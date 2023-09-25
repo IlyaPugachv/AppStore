@@ -8,6 +8,7 @@ class InfoIphoneModelVC: UIViewController {
         IphoneData.shared.iphone[index]
     }
     
+    // MARK: - @IBOutlet
     @IBOutlet weak var imageStackView: UIStackView!
     @IBOutlet weak var imageVIew: UIImageView!
     @IBOutlet weak var nameIphoneLbl: UILabel!
@@ -16,10 +17,10 @@ class InfoIphoneModelVC: UIViewController {
     @IBOutlet weak var feedBackButton: UIButton!
     @IBOutlet weak var leaveReviewAndRatingButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI(with: view.bounds.size)
+        setupUI()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -34,8 +35,7 @@ class InfoIphoneModelVC: UIViewController {
         nameIphoneLbl.text = iphone.name
         priceOnIphoneLbl.text = iphone.ratingBar
         iphoneReviewLbl.text = iphone.price.description + " $"
-        feedBackButton.setTitle("Посмотреть (\(iphone.feedBacks.count)) отзывов", for: .normal)
-        feedBackButton.isEnabled = iphone.feedBacks.count != 0
+        numberOfReviews()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,5 +45,21 @@ class InfoIphoneModelVC: UIViewController {
         if let dest = segue.destination as? AllReviewsAboutIphones {
             dest.index = index
         }
+    }
+    
+    private func numberOfReviews() {
+        if iphone.feedBacks.isEmpty {
+            feedBackButton.setTitle("Посмотреть 0 отзывов", for: .normal)
+        } else {
+            let count = iphone.feedBacks.count
+            feedBackButton.setTitle("Посмотреть (\(count == 1 ? "\(count) отзыв" : "\(count) отзыва"))", for: .normal)
+        }
+        feedBackButton.isEnabled = iphone.feedBacks.count != 0
+    }
+    
+    private func setupUI() {
+        leaveReviewAndRatingButton.backgroundColor = .black
+        leaveReviewAndRatingButton.layer.cornerRadius = 10
+        leaveReviewAndRatingButton.clipsToBounds = true
     }
 }

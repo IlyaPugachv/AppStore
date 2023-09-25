@@ -8,7 +8,7 @@ struct Feedback {
     let mark: Double
     
     var ratingBar: String {
-        String(repeating: "⭐️", count: Int(mark.rounded(.up))) // control + command + " "
+        String(repeating: "⭐️", count: Int(mark.rounded(.up)))
     }
 
     var dateString: String {
