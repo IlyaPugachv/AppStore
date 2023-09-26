@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "iPhone-12-PNG-File.png",
-      "idiom" : "universal"
+      "filename" : "iphone12_purple_both.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

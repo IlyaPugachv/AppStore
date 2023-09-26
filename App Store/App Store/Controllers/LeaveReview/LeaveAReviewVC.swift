@@ -15,7 +15,7 @@ class LeaveAReviewVC: UIViewController {
         setupUI()
     }
     
-    func showErrorLabelIfNeeded(textView: UITextView, errorLabel: UILabel, minLength: Int) {
+    private func showErrorLabelIfNeeded(textView: UITextView, errorLabel: UILabel, minLength: Int) {
         guard let text = textView.text else {
             return
         }
@@ -32,16 +32,17 @@ class LeaveAReviewVC: UIViewController {
         IphoneData.shared.iphone[index].feedBacks.append(feedback)
     }
     
-    func setupUI() {
-        // MARK: - textView
+    // MARK: - setupUI
+    private func setupUI() {
         textView.delegate = self
         textView.backgroundColor = .gray
-        textView.textColor = .black
+        textView.layer.cornerRadius = 15
         textView.backgroundColor = UIColor(white: 0.1, alpha: 0.1)
         textView.textColor = .black
     }
 }
 
+// MARK: - Extension
 extension LeaveAReviewVC: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if textView == textView {

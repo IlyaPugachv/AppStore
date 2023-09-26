@@ -6,6 +6,7 @@ class AllModelsIphoneTableVC: UITableViewController {
     
     var iphone: [Iphone] { IphoneData.shared.iphone }
     
+    // MARK: - Override func
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { iphone.count }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

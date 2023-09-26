@@ -3,16 +3,11 @@ import UIKit
 class AllReviewsAboutIphones: UITableViewController {
     
     var index: Int!
-        
     var iphone: Iphone {
-        get {
-            IphoneData.shared.iphone[index ?? 0]
-        }
-        set {
-            IphoneData.shared.iphone[index ?? 0] = newValue
-        }
-    }
+        get { IphoneData.shared.iphone[index ?? 0] }
+        set { IphoneData.shared.iphone[index ?? 0] = newValue } }
     
+    // MARK: - Override func
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "ReviewTableViewCell")

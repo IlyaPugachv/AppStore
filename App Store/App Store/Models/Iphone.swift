@@ -12,18 +12,15 @@ struct Iphone {
         if let rating = rating {
             return String(repeating: "⭐️", count: Int(rating.rounded(.up)))
         } else {
-            return "Отзывов нет!"
+            return "There are no reviews yet!"
         }
     }
     
     private var rating: Double? {
-        if feedBacks.isEmpty {
-            return nil
+        if feedBacks.isEmpty { return nil
         } else {
             var sum: Double = 0
-            for rewiev in feedBacks {
-                sum += rewiev.mark
-            }
+            for rewiev in feedBacks { sum += rewiev.mark }
             return sum / Double(feedBacks.count)
         }
     }

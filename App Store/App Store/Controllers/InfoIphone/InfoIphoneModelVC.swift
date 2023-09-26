@@ -3,7 +3,6 @@ import UIKit
 class InfoIphoneModelVC: UIViewController {
     
     var index: Int!
-    
     var iphone: Iphone { IphoneData.shared.iphone[index] }
     
     // MARK: - @IBOutlet
@@ -21,25 +20,15 @@ class InfoIphoneModelVC: UIViewController {
         setupUI()
     }
     
+    // MARK: - Override func
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) { updateUI(with: size) }
-    
-     func updateUI(with size: CGSize) {
-        let isVertival = size.width < size.height
-        imageStackView.axis = isVertival ? .vertical : .horizontal
-        title = iphone.name
-        imageVIew.image = iphone.image
-        nameIphoneLbl.text = iphone.name
-        priceOnIphoneLbl.text = iphone.ratingBar
-        iphoneReviewLbl.text = iphone.price.description + " $"
-        numberOfReviews()
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? LeaveAReviewVC { dest.index = index }
         if let dest = segue.destination as? AllReviewsAboutIphones { dest.index = index }
     }
     
-     func numberOfReviews() {
+     private func numberOfReviews() {
         if iphone.feedBacks.isEmpty {
             feedBackButton.setTitle("Посмотреть 0 отзывов", for: .normal)
         } else {
@@ -49,7 +38,18 @@ class InfoIphoneModelVC: UIViewController {
         feedBackButton.isEnabled = iphone.feedBacks.count != 0
     }
     
-     func setupUI() {
+    private func updateUI(with size: CGSize) {
+       let isVertival = size.width < size.height
+       imageStackView.axis = isVertival ? .vertical : .horizontal
+       title = iphone.name
+       imageVIew.image = iphone.image
+       nameIphoneLbl.text = iphone.name
+       priceOnIphoneLbl.text = iphone.ratingBar
+       iphoneReviewLbl.text = "Price: " + iphone.price.description + " $"
+       numberOfReviews()
+   }
+    
+     private func setupUI() {
         leaveReviewAndRatingButton.backgroundColor = .black
         leaveReviewAndRatingButton.layer.cornerRadius = 10
         leaveReviewAndRatingButton.clipsToBounds = true

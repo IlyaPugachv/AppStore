@@ -7,9 +7,7 @@ struct Feedback {
     let text: String
     let mark: Double
     
-    var ratingBar: String {
-        String(repeating: "⭐️", count: Int(mark.rounded(.up)))
-    }
+    var ratingBar: String { String(repeating: "⭐️", count: Int(mark.rounded(.up))) }
 
     var dateString: String {
         let dateFormatter = DateFormatter()
