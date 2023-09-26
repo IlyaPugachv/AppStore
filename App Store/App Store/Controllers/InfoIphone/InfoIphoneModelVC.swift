@@ -23,7 +23,7 @@ class InfoIphoneModelVC: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) { updateUI(with: size) }
     
-    private func updateUI(with size: CGSize) {
+     func updateUI(with size: CGSize) {
         let isVertival = size.width < size.height
         imageStackView.axis = isVertival ? .vertical : .horizontal
         title = iphone.name
@@ -39,7 +39,7 @@ class InfoIphoneModelVC: UIViewController {
         if let dest = segue.destination as? AllReviewsAboutIphones { dest.index = index }
     }
     
-    private func numberOfReviews() {
+     func numberOfReviews() {
         if iphone.feedBacks.isEmpty {
             feedBackButton.setTitle("Посмотреть 0 отзывов", for: .normal)
         } else {
@@ -49,7 +49,7 @@ class InfoIphoneModelVC: UIViewController {
         feedBackButton.isEnabled = iphone.feedBacks.count != 0
     }
     
-    private func setupUI() {
+     func setupUI() {
         leaveReviewAndRatingButton.backgroundColor = .black
         leaveReviewAndRatingButton.layer.cornerRadius = 10
         leaveReviewAndRatingButton.clipsToBounds = true

@@ -3,8 +3,15 @@ import UIKit
 class AllReviewsAboutIphones: UITableViewController {
     
     var index: Int!
-    
-    var iphone: Iphone { IphoneData.shared.iphone[index] }
+        
+    var iphone: Iphone {
+        get {
+            IphoneData.shared.iphone[index ?? 0]
+        }
+        set {
+            IphoneData.shared.iphone[index ?? 0] = newValue
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,5 +29,11 @@ class AllReviewsAboutIphones: UITableViewController {
         cell.labelthree.text = feedback.ratingBar
         return cell
     }
+        
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            iphone.feedBacks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .none)
+        }
+    }
 }
-
