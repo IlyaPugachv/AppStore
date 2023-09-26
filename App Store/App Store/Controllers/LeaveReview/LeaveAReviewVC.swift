@@ -27,7 +27,6 @@ class LeaveAReviewVC: UIViewController {
     }
     
     @IBAction func saveBtnAction(_ sender: UIButton) {
-        
         let feedback = Feedback(text: textView.text, mark: Double(segmentalControl.selectedSegmentIndex + 1))
         IphoneData.shared.iphone[index].feedBacks.append(feedback)
     }
