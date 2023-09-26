@@ -26,6 +26,15 @@ class LeaveAReviewVC: UIViewController {
         }
     }
     
+    func fullKeyboardHiding() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func hideKeyboard() {
+        self.textView.resignFirstResponder()
+    }
+    
     @IBAction func saveBtnAction(_ sender: UIButton) {
         let feedback = Feedback(text: textView.text, mark: Double(segmentalControl.selectedSegmentIndex + 1))
         IphoneData.shared.iphone[index].feedBacks.append(feedback)
@@ -38,6 +47,7 @@ class LeaveAReviewVC: UIViewController {
         textView.layer.cornerRadius = 15
         textView.backgroundColor = UIColor(white: 0.1, alpha: 0.1)
         textView.textColor = .black
+        fullKeyboardHiding()
     }
 }
 
